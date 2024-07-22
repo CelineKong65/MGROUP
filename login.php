@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $_SESSION['user_id'] = $row['id']; // Store the user ID in the session
-        header("Location: ../mgroup/homepage.php"); // Redirect to user profile page
+        header("Location: ../mgroup/homepage.html"); // Redirect to user profile page
         exit(); // Ensure no further code is executed after redirection
     } else {
         $error_message = "Invalid email or password.";
@@ -159,7 +159,7 @@ body
 
 <body>
 <header>
-    <a id="back" href="../mgroup/index.php"><b>BACK TO HOME</b></a>
+    <a id="back" href="../mgroup/index.html"><b>BACK TO HOME</b></a>
 </header>
 <div id="container">
     <div style="border: 1px solid #DDD; border-radius: 10px; width: 400px; padding: 0px">
