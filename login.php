@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $_SESSION['user_id'] = $row['id']; // Store the user ID in the session
-        header("Location: ../mgroup/homepage.html"); // Redirect to user profile page
+        header("Location: ../mgroup/homepage.php"); // Redirect to user profile page
         exit(); // Ensure no further code is executed after redirection
     } else {
         $error_message = "Invalid email or password.";
@@ -45,10 +45,7 @@ $conn->close();
 </head>
 
 <style>
-
-   
-body 
-{
+body {
     background-image: url(image.png);
     background-size: cover; 
     background-repeat: no-repeat; 
@@ -56,17 +53,14 @@ body
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#container 
-{
+#container {
     display: flex;
     justify-content: center; 
     align-items: center; 
     height: 100vh; 
 }
 
-
-#login-title 
-{
+#login-title {
     height: 50px;
     background-color: #FF9B50;
     background-repeat: no-repeat;
@@ -75,15 +69,13 @@ body
     border-radius: 8px 8px 0px 0px;
 }
 
-#login-form 
-{
+#login-form {
     padding: 10px;
     background-color: #FFFFFF;
     text-align: center;
 }
 
-#login-form input[type=email],[type=password] 
-{
+#login-form input[type=email],[type=password] {
     width: 250px;
     border-radius: 5px;
     border: 1px solid #FF9B50;
@@ -91,24 +83,21 @@ body
     padding: 5px 10px 5px 40px;
 }
 
-#login-form input[type=email] 
-{
+#login-form input[type=email] {
     background-image: url(email.png);
     background-size: 26px;
     background-repeat: no-repeat;
     background-position: 10px 10px;
 }
 
-#login-form input[type=password] 
-{
+#login-form input[type=password] {
     background-image: url(lock.png);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: 10px 7px;
 }
 
-#login-form input[type=submit] 
-{
+#login-form input[type=submit] {
     background-color: #FF9B50;
     width: 300px;
     padding: 10px;
@@ -118,28 +107,24 @@ body
     font-weight: bold;
 }
 
-#login-form input[type=submit]:hover 
-{
+#login-form input[type=submit]:hover {
     background-color:#FFCF81;
     cursor: pointer;
 }
 
-#login-form p a 
-{
+#login-form p a {
     text-decoration: none;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 0.8em;
 }
 
-#login-form p a:hover
-{
+#login-form p a:hover {
     font-style: italic;
     color: red;
 }
 
-#back
-{
+#back {
     position: absolute;
     top: 10px; 
     left: 10px; 
@@ -152,10 +137,7 @@ body
     text-decoration: none;
     padding: 5px 5px;
 }
-
-
-    </style>
-
+</style>
 
 <body>
 <header>

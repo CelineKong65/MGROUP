@@ -17,7 +17,7 @@
             <ul>
                 <li><a href="../mgroup/aboutus.html">About</a></li>
                 <li><a href="../mgroup/contactus.php">Contact</a></li>
-                <li><a href="../mgroup/index.php">Log Out</a><li>
+                <li><a href="../mgroup/index.html">Log Out</a><li>
             </ul>
         </nav>
     </header>

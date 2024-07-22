@@ -80,7 +80,7 @@
     <footer>
         <nav>
                 <ul>
-                    <li><a href="../mgroup/homepage.html">Home</a></li>
+                    <li><a href="../mgroup/homepage.php">Home</a></li>
                     <li><a href="../mgroup/aboutus.html">About</a></li>
                     <li><a href="../mgroup/contactus.php">Contact</a></li>
                 </ul>
