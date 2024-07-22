@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <a id="back" href="../mgroup/homepage.php"><b>BACK TO HOME</b></a>
+        <a id="back" href="../index.html"><b>BACK TO HOME</b></a>
         <h1>Property Shop</h1>
     </header>
 
@@ -23,7 +23,7 @@
 
             <div style="padding: 5%;">
                 <h2>Contact Us</h2>
-                <form action="contactus.php" method="POST" class="contact-form">
+                <form action="contactus.html" method="POST" class="contact-form">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
 
@@ -35,39 +35,6 @@
 
                     <button type="submit">Send Message</button>
                 </form>
-                <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "";
-                    $dbname = "mgroup";
-
-                    // Create connection
-                    $conn = new mysqli($servername, $username, $password, $dbname);
-
-                    // Check connection
-                    if ($conn->connect_error) {
-                        die("Connection failed: " . $conn->connect_error);
-                    }
-                    
-                    $name = $_POST['name'];
-                    $email = $_POST['email'];
-                    $message = $_POST['message'];
-
-                    // Prepare and bind
-                    $stmt = $conn->prepare("INSERT INTO messages (user_name, user_email, user_message) VALUES (?, ?, ?)");
-                    $stmt->bind_param("sss", $name, $email, $message);
-
-                    if ($stmt->execute()) {
-                        echo "<p>Message sent successfully.</p>";
-                    } else {
-                        echo "<p>Error: " . $stmt->error . "</p>";
-                    }
-
-                    $stmt->close();
-                    $conn->close();
-                }
-                ?>
             </div>
         </main>
 
@@ -80,9 +47,9 @@
     <footer>
         <nav>
                 <ul>
-                    <li><a href="../mgroup/homepage.php">Home</a></li>
+                    <li><a href="../mgroup/index.html">Home</a></li>
                     <li><a href="../mgroup/aboutus.html">About</a></li>
-                    <li><a href="../mgroup/contactus.php">Contact</a></li>
+                    <li><a href="../mgroup/contactus.html">Contact</a></li>
                 </ul>
         </nav>
         <p>&copy; 2019-2024 Stationery Shop. All rights reserved. Company</p>
